@@ -7,6 +7,6 @@ To Do List:
 include:
 stdio
 stdlib
-SDL/SDL.h
+gtk/gtk.h
 math.h
 time.h
