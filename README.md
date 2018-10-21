@@ -10,4 +10,4 @@ stdlib
 math.h
 (time.h)
 
-voir pour la librairie gr phique: soit Xwindows soit microwindows
+voir pour la librairie graphique: soit Xwindows soit microwindows
