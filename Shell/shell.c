@@ -74,8 +74,8 @@ int compter(char * str){                              //fonction pour compter le
 }
 
 void detecter(char **command, int mots){                          //fonction pour lancer une commande suivant l'entrée utilisateur
-  char commandes[8][200] = {"exit/sortie", "Commande pour quitter la shell", "echo", "Commande pour afficher quelque chose", "help/aide", "Commande pour afficher l'aide",\
-  "pause", "Commande pour faire une pause dans la shell"};      //la liste des commandes
+  char commandes[8][200] = {"exit/sortie", "Commande pour quitter le shell", "echo", "Commande pour afficher quelque chose", "help/aide", "Commande pour afficher l'aide",\
+  "pause", "Commande pour faire une pause dans le shell"};      //la liste des commandes
 
   if ( !strcmp(command[0], "exit") || !strcmp(command[0], "sortie") ){        // commande pour arreter le shell
     shell = 0;
