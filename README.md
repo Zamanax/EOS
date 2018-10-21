@@ -7,6 +7,7 @@ To Do List:
 include:
 stdio
 stdlib
-gtk/gtk.h
 math.h
-time.h
+(time.h)
+
+voir pour la librairie gr phique: soit Xwindows soit microwindows
