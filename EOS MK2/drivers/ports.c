@@ -17,5 +17,5 @@ unsigned short port_word_in (unsigned short port){
 }
 
 void port_word_out(unsigned short port, unsigned short data){
-  __asm__("out %%ax, dx" : : "a" (data), "d" (port));
+  __asm__("out %%ax, %%dx" : : "a" (data), "d" (port));
 }
