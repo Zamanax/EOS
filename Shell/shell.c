@@ -78,28 +78,32 @@ void detecter(char **command, int mots){                          //fonction pou
 
   if ( !strcmp(command[0], "exit") || !strcmp(command[0], "sortie") ){        // commande pour arreter le shell
     shell = 0;
-    printf("arret");
+    kprint("arret");
   }
 
   else if (!strcmp(command[0], "echo")){                          // commande pour affichier un message
     for (int j = 1; j < mots; j++){
-      printf("%s ", command[j]);
+      kprint("%s ", command[j]);
     }
   }
 
   else if(!strcmp(command[0], "help") || !strcmp(command[0], "aide")) {       //commande d'aide
     for (int i = 0; i < 8; i +=2){
-      printf("%s | %s \n", commandes[i], commandes[i+1]);
+      kprint("%s | %s \n", commandes[i], commandes[i+1]);
     }
   }
 
   else if (!strcmp(command[0], "pause")){                          // commande pour stopper la shell
-    printf("Appuyez sur Entree pour continuer : ");
+    kprint("Appuyez sur Entree pour continuer : ");
     char pause[2];
     fgets(pause, 2, stdin);
     viderBuffer(0);
   }
-  else printf("Commande non-reconnue!\nFaites help ou aide pour obtennir une liste des commades disponibles\n");
+  
+  else if (!strcmp(command[0], "clear") || !strcmp(command[0], "effacer")){
+    clear_screen();
+  }
+  else kprint("Commande non-reconnue!\nFaites help ou aide pour obtennir une liste des commades disponibles\n");
 
   printf("\n");
 }
