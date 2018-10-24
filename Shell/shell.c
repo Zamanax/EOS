@@ -1,5 +1,4 @@
 #include <stdio.h>      //imports
-#include <stdlib.h>
 #include <string.h>
 #define LENENTRY 50 // Constante contenant la longeur maximale pour qu'une séquence soit interprétée
 
