@@ -13,3 +13,4 @@ void clear_screen();
 void kprint_at(char *message, int col, int row);
 void kprint(char *message);
 int print_char(char c, int col, int row, char attr);
+void fprint(char *message, int col, int row);
