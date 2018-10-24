@@ -100,6 +100,7 @@ void detecter(char **command, int mots){                          //fonction pou
     fgets(pause, 2, stdin);
     viderBuffer(0);
   }
+  else printf("Commande non-reconnue!\nFaites help ou aide pour obtennir une liste des commades disponibles\n");
 
   printf("\n");
 }
