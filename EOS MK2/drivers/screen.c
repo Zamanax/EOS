@@ -21,7 +21,7 @@ void kprint_at(char *message, int col, int row) {
 
     /* Loop through message and print it */
     int i = 0;
-    while (message[i] != 0) {
+    while (message[i] != '\0') {
         offset = print_char(message[i++], col, row, WHITE_ON_BLACK);
         /* Compute row/col for next iteration */
         row = get_offset_row(offset);
@@ -46,8 +46,8 @@ int print_char(char c, int col, int row, char attr) {
 
     /* Error control: print a red 'E' if the coords aren't right */
     if (col >= MAX_COLS || row >= MAX_ROWS) {
-        vidmem[2*(MAX_COLS)*(MAX_ROWS)-2] = 'E';
-        vidmem[2*(MAX_COLS)*(MAX_ROWS)-1] = RED_ON_WHITE;
+        vidmem[2*(MAX_COLS)*(MAX_ROWS)-3] = 'E';
+        vidmem[2*(MAX_COLS)*(MAX_ROWS)-2] = RED_ON_WHITE;
         return get_offset(col, row);
     }
 
@@ -59,8 +59,8 @@ int print_char(char c, int col, int row, char attr) {
         row = get_offset_row(offset);
         offset = get_offset(0, row+1);
     } else {
-        vidmem[offset] = c;
-        vidmem[offset+1] = attr;
+        vidmem[offset+1] = c;
+        vidmem[offset+2] = attr;
         offset += 2;
     }
     set_cursor_offset(offset);
