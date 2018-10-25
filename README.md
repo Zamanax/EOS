@@ -4,6 +4,8 @@ OS : On sait pas où on va
 
 To Do List:
 
+afficher un mot à l'écran!!
+
 include:
 stdio
 stdlib
