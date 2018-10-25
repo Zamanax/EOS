@@ -8,17 +8,17 @@ int get_offset(int col, int row);
 int get_offset_row(int offset);
 int get_offset_col(int offset);
 // FONCTIONS PUBLIQUES
-void fprint(char message, int col, int row){
+void fprint(char *message, int col, int row){
   int i = 0;
 
-  while (message[i] != '\0'){
-    print_char(message[i], col + i, row, 0x0a);
+  //print_char(message[0], col, row, 0x0c);
+  while (message[i] != 0){
+    print_char(message[i], col + i, row, 0x0c);
     i++;
   }
 }
 void kprint_at(char *message, int col, int row) {
     /* Set cursor if col/row are negative */
-
 
     int offset;
     if (col >= 0 && row >= 0)
@@ -28,15 +28,13 @@ void kprint_at(char *message, int col, int row) {
         row = get_offset_row(offset);
         col = get_offset_col(offset);
     }
-    print_char(message[0], col, row, WHITE_ON_BLACK);
     /* Loop through message and print it */
-    /*int i = 0;
+    int i = 0;
     while (message[i] != '\0') {
         offset = print_char(message[i++], col, row, WHITE_ON_BLACK);
-        Compute row/col for next iteration
         row = get_offset_row(offset);
         col = get_offset_col(offset);
-    }*/
+    }
 }
 void kprint(char *message){
   kprint_at(message, -1, -1); // kprint remettra une bonne valeur (offset à 0)
@@ -103,7 +101,7 @@ void set_cursor_offset(int offset) {
 void clear_screen() {
     int screen_size = MAX_COLS * MAX_ROWS;
     int i;
-    char *screen = VIDEO_ADDRESS;
+    char *screen = (char *)(VIDEO_ADDRESS);
 
     for (i = 0; i < screen_size; i++) {
         screen[i*2] = ' ';
