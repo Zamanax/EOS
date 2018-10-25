@@ -104,8 +104,8 @@ void clear_screen() {
     char *screen = (char *)(VIDEO_ADDRESS);
 
     for (i = 0; i < screen_size; i++) {
-        screen[i*2] = ' ';
-        screen[i*2+1] = WHITE_ON_BLACK;
+        screen[i*2+1] = ' ';
+        screen[i*2+2] = WHITE_ON_BLACK;
     }
     set_cursor_offset(get_offset(0, 0));
 }
