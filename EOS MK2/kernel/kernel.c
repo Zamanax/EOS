@@ -3,7 +3,7 @@
 void main() { //fonction principale de l'os
   clear_screen();
   char test[2] = {'e', '\0'};  //pour le test, on créé une vairable "à la main"
-  fprint(test, 2, 1);         //fonctionne
+  fprint(test, 2, 1);         //fonctionne (mais que à cette position
   kprint_at(test, 2, 3);      //rien
   
   print_char('d', 2, 5, 0x0a); //fonctionne
