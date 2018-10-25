@@ -8,12 +8,11 @@ int get_offset(int col, int row);
 int get_offset_row(int offset);
 int get_offset_col(int offset);
 // FONCTIONS PUBLIQUES
-void fprint(char *message, int col, int row){
+void fprint(char message, int col, int row){
   int i = 0;
 
   while (message[i] != '\0'){
-    print_char(message[i], col + i, row + i%MAX_COLS, WHITE_ON_BLACK);
-
+    print_char(message[i], col + i, row, 0x0a);
     i++;
   }
 }
