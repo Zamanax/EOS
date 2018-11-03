@@ -7,6 +7,6 @@ kmain()
 {
 	isr_install();
 	clearScreen();
-	print("Hi and Welcome to NIDOS operating system\nPlease enter a command\n");
+	print("Bonjour bienvenue sur EOS, veuillez rentrer une commande\n");
     launch_shell();    
 }

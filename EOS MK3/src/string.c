@@ -23,9 +23,13 @@ uint8 strEql(string ch1,string ch2)
         return result;
 }
 
-char *strchr(char s, int ch) {
-  while (s && s != (char) ch) s++;
-  if (s == (char) ch) return (char *) s;
-  return NULL;
+char *strchr(const char *p, int ch)
+{
+	char c;
+	c = ch;
+	for (;; ++p) {
+		if (*p == c) return ((char *)p);
+		if (*p == '\0') return (NULL);
+	}
 }
 

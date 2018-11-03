@@ -64,5 +64,5 @@ build:all
 	
 clear:
 	rm -f obj/*.o
-	rm -r -f iknow/
+	rm -r -f EOS/
 	

@@ -1,4 +1,1 @@
-nouvelle version meilleur et qui affiche du texte!!
-
-
-faudrait juste supprimer le dossier EOS et les fichiers dans le dossier obj
+Os preque fonctionnel avec shell basique qui a juste un gubb sur la séparation des mots
