@@ -4,12 +4,6 @@ OS : On sait pas où on va
 
 To Do List:
 
-afficher un mot à l'écran!!
+séparer les mots dans le shell
 
-include:
-stdio
-stdlib
-math.h
-(time.h)
-
-voir pour la librairie graphique: soit Xwindows soit microwindows
+commencer quelque chose de graphique
