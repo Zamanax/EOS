@@ -4,10 +4,10 @@ section         .text
         dd      0x1BADB002
         dd      0x00
         dd      - (0x1BADB002+0x00)
-        
+
 global start
-extern kmain            ; this function is gonna be located in our c code(kernel.c)
+extern kmain            ; cette fonction sera située dans notre code en c (kernel.c)
 start:
-        cli             ;clears the interrupts 
-        call kmain      ;send processor to continue execution from the kamin funtion in c code
-        hlt             ; halt the cpu(pause it from executing from this address
+        cli             ;vidage des interrupts
+        call kmain      ;demande au processeur de continuer l'execution sur la fonction kmain
+        hlt             ;on arrete l'execution de cette adresse par le processeur

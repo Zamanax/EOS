@@ -1,18 +1,18 @@
 #include "../include/string.h"
 uint16 strlength(string ch)
 {
-        uint16 i = 0;           //Changed counter to 0
-        while(ch[i++]);  
-        return i-1;               //Changed counter to i instead of i--
+        uint16 strCount = 0;           //compteur à 0
+        while(ch[strCount++]);
+        return strCount-1;               //on lui soustrait 1
 }
 
 
-uint8 strEql(string ch1,string ch2)                     
+uint8 strEql(string ch1,string ch2) //fonction de recherche d'égalité
 {
         uint8 result = 1;
         uint8 size = strlength(ch1);
         if(size != strlength(ch2)) result =0;
-        else 
+        else
         {
         uint8 i = 0;
         for(i;i<=size;i++)
@@ -23,7 +23,7 @@ uint8 strEql(string ch1,string ch2)
         return result;
 }
 
-char *strchr(const char *p, int ch)
+char *strchr(const char *p, int ch) //fonction pour chercher un caractère dans un string
 {
 	char c;
 	c = ch;
@@ -32,4 +32,3 @@ char *strchr(const char *p, int ch)
 		if (*p == '\0') return (NULL);
 	}
 }
-

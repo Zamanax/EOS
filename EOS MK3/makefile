@@ -53,14 +53,14 @@ build:all
 	#sudo apt-get install xorriso
 	rm EOS/boot/grub/ -r -f
 	mkdir EOS/boot/grub/
-	echo set default=0 >> iknow/boot/grub/grub.cfg
-	echo set timeout=0 >> iknow/boot/grub/grub.cfg
-	echo menuentry "IKnow" { >> iknow/boot/grub/grub.cfg
-	echo         set root='(hd96)' >> iknow/boot/grub/grub.cfg
-	echo         multiboot /boot/kernel.bin >> iknow/boot/grub/grub.cfg
+	echo set default=0 >> EOS/boot/grub/grub.cfg
+	echo set timeout=0 >> EOS/boot/grub/grub.cfg
+	echo menuentry "EOS" { >> EOS/boot/grub/grub.cfg
+	echo         set root='(hd96)' >> EOS/boot/grub/grub.cfg
+	echo         multiboot /boot/kernel.bin >> EOS/boot/grub/grub.cfg
 	echo } >> EOS/boot/grub/grub.cfg
 
-	grub-mkrescue -o iknow.iso iknow/
+	grub-mkrescue -o EOS.iso EOS/
 	
 clear:
 	rm -f obj/*.o
